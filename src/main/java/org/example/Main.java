@@ -10,6 +10,7 @@ public class Main {
         String[] prefix = {"flower","flow","flowight"};
         System.out.println(longestCommonPrefix(prefix));
         System.out.println("Перемога");
+        System.out.println("Перемога буде");
     }
 }
 
