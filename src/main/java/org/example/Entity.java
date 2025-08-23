@@ -1,18 +1,23 @@
 package org.example;
 
 public abstract class Entity {
-    private int hp;
-    private String className;
-    public Entity(int hp, String className) {
-        this.hp = hp;
-        this.className = className;
+    private int hp = 15;
+    private boolean destroyed = false;
+    private String name;
+    public Entity(String name) {
+        this.name = name;
     }
-    public int getHp() {
-        return hp;
+    public boolean isDestroyed(){
+        return destroyed;
     }
-    public String getClassName() {
-        return className;
+    protected boolean damage(int dhp) {
+        if(hp-dhp > 0) {
+            hp -= dhp;
+        }else{
+            destroyed = true;
+            System.out.println("Entity " + name + " was destroyed");
+        }
+        return isDestroyed();
     }
 
-    public abstract void Roar();
 }
