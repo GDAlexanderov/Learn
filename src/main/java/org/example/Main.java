@@ -9,12 +9,16 @@ import static org.example.Solution2.longestCommonPrefix;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Input a number: ");
-        int num = in.nextInt();
-
-        System.out.printf("Your number: %d \n", num);
-        in.close();
+        CoolPrinter.add("Own, two,");
+        CoolPrinter.add("I love you.");
+        CoolPrinter.add("Three, four,");
+        CoolPrinter.add("Touch the floor.");
+        CoolPrinter.print(new Formatter() {
+            @Override
+            public String format(String line) {
+                return "** "+line+" **";
+            }
+        });
 
     }
 }
