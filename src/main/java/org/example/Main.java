@@ -11,7 +11,8 @@ import static org.example.Solution2.longestCommonPrefix;
 public class Main {
     public static void main(String[] args) throws IOException {
         GetReceipts g = new GetReceipts();
-        System.out.println(g.arePalindromes());
+        String str = g.translate();
+        System.out.println(str);
     }
 
 }
